@@ -1,4 +1,79 @@
+
+
 body {
   height: 100vh;
-  background: linear-gradient(#e66465, #9198e5);  
+  background: linear-gradient(#e66465, #9198e5); 
+  font-family: arial
 }
+
+h1 {
+
+  color: rgb(255, 209, 247);
+  text-align: center;
+}
+.gif-div {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.gif {
+  margin: 3vw;
+  height: 20vh;
+}
+
+#top-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.letter-inputs {
+  padding: 5px;
+}
+
+input {
+  height: 4em;
+  width: 3.2em;
+}
+
+.btn {
+  text-align: center;
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #F082AC;
+}
+
