@@ -6,7 +6,6 @@ function getRandomDino() {
   promise.then(function(dino) {
     reset(); 
     printElements(dino);
-    console.log(dino);
     createDinoNameInputs(dino);
   }, function(errorMessage) {
     printError(errorMessage);
@@ -28,10 +27,17 @@ function createDinoNameInputs(dino) {
 function checkDinoLetter(e) {
   e.preventDefault();
   let letters = document.querySelectorAll("input[type='text']");
+  let letterArray = [];
   letters.forEach((letter) => {
-    console.log(letter);
+    letterArray.push(letter.dataset.id);
+  });
+  letters.forEach((letter) => {
     if (letter.value.toUpperCase() === letter.dataset.id) {
       letter.style.backgroundColor = "green";
+    } else if (letterArray.includes(letter.value.toUpperCase())) {
+      let index = letterArray.indexOf(letter);
+      letterArray.splice(index, 1);
+      letter.style.backgroundColor = "yellow";
     } else {
       letter.style.backgroundColor = "red";
     }
@@ -43,7 +49,7 @@ function printElements(result) {
 }
 
 function reset() {
-  const div = document.querySelector('.letter-inputs')
+  const div = document.querySelector('.letter-inputs');
   div.innerHTML = null;
 }
 

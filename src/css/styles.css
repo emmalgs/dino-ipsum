@@ -29,6 +29,13 @@ h1 {
   align-items: center;
 }
 
+#description {
+  text-align: center;
+  font-size: 1.2em;
+  font-style: italic;
+  padding: 15px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -40,8 +47,9 @@ form {
 }
 
 input {
-  height: 4em;
-  width: 3.2em;
+  width: 1.2em;
+  font-size: 3em;
+  text-align: center;
 }
 
 .btn {
