@@ -8,7 +8,7 @@ export default class DinoService {
         if (this.status === 200) {
           resolve(response);
         } else {
-          reject(response);
+          reject(this);
         }
       });
       request.open("GET", url, true);
